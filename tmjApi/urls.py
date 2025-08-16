@@ -24,8 +24,11 @@ from rest_framework_simplejwt.views import (
 from register.views import UserRegistrationView
 
 urlpatterns = [
+    ## apis de autenticação
     path('api/register/', UserRegistrationView.as_view(), name='registrar usuário'),
     path('api/token/', TokenObtainPairView.as_view(), name='obter refresh e access tokens'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='obter um novo access token'),
     path('api/token/blacklist/', TokenBlacklistView.as_view(), name='Invalidar os tokens do usuário '),
+
+    path('api/', include('tarefas.urls'))
 ]
