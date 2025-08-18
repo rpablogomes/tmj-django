@@ -72,3 +72,18 @@ Todas as rotas de tarefas exigem um token de acesso válido no cabeçalho:
 
 #### Listar apenas tarefas não concluídas
 - **GET** `http://127.0.0.1:8000/api/tarefas?completed=false`
+
+##Testes
+Basta executar um dos comandos abaixo no seu terminal, dependendo do ambiente em que o projeto está rodando.
+
+Caso o projeto esteja sendo executado localmente:
+bash```
+  pytest
+```
+
+Caso o projeto esteja sendo executado em um container:
+bash```
+  docker exec -it tmj-django-web-1 pytest
+```
+
+*O nome do container provavelmente será tmj-django-web-1. Caso ocorra algum erro, verifique o nome do container no seu computador.
