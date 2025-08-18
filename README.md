@@ -77,12 +77,13 @@ Todas as rotas de tarefas exigem um token de acesso válido no cabeçalho:
 Basta executar um dos comandos abaixo no seu terminal, dependendo do ambiente em que o projeto está rodando.
 
 Caso o projeto esteja sendo executado localmente:
-bash```
+```bash
   pytest
 ```
 
 Caso o projeto esteja sendo executado em um container:
-bash```
+
+```bash
   docker exec -it tmj-django-web-1 pytest
 ```
 
