@@ -26,9 +26,32 @@ http://127.0.0.1:8000
 ## Rotas da API
 ### Autenticação via JWT
 
+- **POST** `http://localhost:8000/api/register/` → Autentica um usuário e retorna os tokens de acesso e refresh.
+```bash
+  {
+    "username": "usuario",
+    "password": "senha"
+  }
+```
 - **POST** `http://127.0.0.1:8000/api/token/` → Autentica um usuário e retorna os tokens de acesso e refresh.
+```bash
+  {
+    "username": "usuario",
+    "password": "senha"
+  }
+```
 - **POST** `http://127.0.0.1:8000/api/token/refresh/` → Renova o token de acesso usando um token de refresh.
+```bash
+{
+"refresh": "refresh token"
+}
+```
 - **POST** `http://127.0.0.1:8000/api/token/blacklist/` → Adiciona um token de refresh à blacklist (logout).
+```bash
+{
+"refresh": "refresh token"
+}
+```
 
 Todas as rotas de tarefas exigem um token de acesso válido no cabeçalho:
 
