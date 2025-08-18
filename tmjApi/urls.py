@@ -25,10 +25,11 @@ from register.views import UserRegistrationView
 
 urlpatterns = [
     ## apis de autenticação
-    path('api/register/', UserRegistrationView.as_view(), name='registrar usuário'),
-    path('api/token/', TokenObtainPairView.as_view(), name='obter refresh e access tokens'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='obter um novo access token'),
-    path('api/token/blacklist/', TokenBlacklistView.as_view(), name='Invalidar os tokens do usuário '),
+    path('api/register/', UserRegistrationView.as_view(), name='register_user'),
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('api/token/blacklist/', TokenBlacklistView.as_view(), name='token_blacklist'),
 
+    ## apis com as tarefas
     path('api/', include('tarefas.urls'))
 ]
